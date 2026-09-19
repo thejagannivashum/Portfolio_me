@@ -81,12 +81,16 @@ export default function ProjectsSection() {
             <Card3DTilt
               key={project.id}
               maxTilt={9}
+              elevateZ={18}
               style={{
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 padding: '0',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                background: 'rgba(12, 17, 36, 0.75)',
+                border: '1px solid var(--border-card-hover)',
+                boxShadow: '0 18px 40px rgba(0, 0, 0, 0.5)'
               }}
             >
               {/* Image banner with overlay */}

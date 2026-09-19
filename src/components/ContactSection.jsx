@@ -81,7 +81,16 @@ export default function ContactSection() {
           }}
         >
           {/* Left Column: Direct Info & Quick Copy */}
-          <Card3DTilt maxTilt={7} style={{ padding: '2.5rem' }}>
+          <Card3DTilt
+            maxTilt={7}
+            elevateZ={18}
+            style={{
+              padding: '2.5rem',
+              background: 'rgba(12, 17, 36, 0.75)',
+              border: '1px solid var(--border-card-hover)',
+              boxShadow: '0 18px 40px rgba(0, 0, 0, 0.5)'
+            }}
+          >
             <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.75rem' }}>
               Direct Channels
             </h3>
@@ -257,7 +266,16 @@ export default function ContactSection() {
           </Card3DTilt>
 
           {/* Right Column: Transmission Form */}
-          <Card3DTilt maxTilt={6} style={{ padding: '2.5rem' }}>
+          <Card3DTilt
+            maxTilt={7}
+            elevateZ={18}
+            style={{
+              padding: '2.5rem',
+              background: 'rgba(12, 17, 36, 0.75)',
+              border: '1px solid var(--border-card-hover)',
+              boxShadow: '0 18px 40px rgba(0, 0, 0, 0.5)'
+            }}
+          >
             <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '1.5rem' }}>
               Send a Transmission
             </h3>

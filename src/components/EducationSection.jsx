@@ -20,7 +20,16 @@ export default function EducationSection() {
         </div>
 
         <div style={{ maxWidth: '840px', margin: '0 auto' }}>
-          <Card3DTilt maxTilt={6} style={{ padding: '2.5rem' }}>
+          <Card3DTilt
+            maxTilt={7}
+            elevateZ={20}
+            style={{
+              padding: '2.5rem',
+              background: 'rgba(12, 17, 36, 0.8)',
+              border: '1px solid var(--border-card-hover)',
+              boxShadow: '0 20px 45px rgba(0, 0, 0, 0.5)'
+            }}
+          >
             <div
               style={{
                 display: 'flex',

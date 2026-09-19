@@ -8,7 +8,7 @@ import EducationSection from './components/EducationSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
-import BackgroundParticles from './components/BackgroundParticles';
+import SpatialWorldCanvas from './components/SpatialWorldCanvas';
 import CustomCursor from './components/CustomCursor';
 import Preloader from './components/Preloader';
 import './App.css';
@@ -33,8 +33,8 @@ function App() {
       {/* Premium Custom Cursor (Desktop Fine Pointer Only) */}
       <CustomCursor />
 
-      {/* Dynamic Starfield / Particle Background */}
-      <BackgroundParticles />
+      {/* Full-Page Continuous 3D WebGL World & Neural Starfield */}
+      <SpatialWorldCanvas />
 
       {/* Floating Glassmorphic Navbar with Theme Switcher */}
       <Navbar currentTheme={theme} onThemeChange={handleThemeChange} />

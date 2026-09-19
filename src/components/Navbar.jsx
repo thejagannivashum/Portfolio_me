@@ -22,7 +22,8 @@ export default function Navbar({ currentTheme, onThemeChange }) {
     { id: 'cyan', label: 'Cyan Neon', color: '#00f2fe' },
     { id: 'violet', label: 'Electric Violet', color: '#a855f7' },
     { id: 'emerald', label: 'Matrix Emerald', color: '#10b981' },
-    { id: 'amber', label: 'Solar Amber', color: '#f59e0b' }
+    { id: 'amber', label: 'Solar Amber', color: '#f59e0b' },
+    { id: 'rose', label: 'Cyber Rose', color: '#f43f5e' }
   ];
 
   useEffect(() => {

@@ -203,11 +203,14 @@ export default function SkillsSection() {
               <Card3DTilt
                 key={skill.name}
                 maxTilt={9}
+                elevateZ={16}
                 style={{
                   padding: '1.75rem',
                   display: 'flex',
                   flexDirection: 'column',
-                  justifyContent: 'space-between'
+                  justifyContent: 'space-between',
+                  background: 'rgba(12, 17, 36, 0.7)',
+                  border: '1px solid var(--border-card)'
                 }}
               >
                 <div>

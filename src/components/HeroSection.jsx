@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, InstagramIcon } from './Icons';
 import { personalInfo } from '../data/portfolioData';
-import ThreeHeroCanvas from './ThreeHeroCanvas';
+import SpatialFlightDeck from './SpatialFlightDeck';
 import Card3DTilt from './Card3DTilt';
 
 const ROLES = [
@@ -228,7 +228,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column: 3D Interactive WebGL Widget */}
+          {/* Right Column: 3D Tactical Holo-Flight Deck */}
           <div style={{ position: 'relative', minHeight: '480px' }}>
             {/* Background Ambient Glow */}
             <div
@@ -237,50 +237,18 @@ export default function HeroSection() {
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                width: '380px',
-                height: '380px',
+                width: '420px',
+                height: '420px',
                 background: 'radial-gradient(circle, var(--accent-glow) 0%, transparent 70%)',
-                filter: 'blur(70px)',
+                filter: 'blur(80px)',
                 zIndex: 0,
                 pointerEvents: 'none'
               }}
             />
 
-            {/* Three.js Interactive Canvas Card */}
-            <Card3DTilt
-              maxTilt={7}
-              style={{
-                borderRadius: '24px',
-                border: '1px solid var(--border-card-hover)',
-                overflow: 'hidden',
-                background: 'rgba(12, 17, 34, 0.65)',
-                minHeight: '480px'
-              }}
-            >
-              <ThreeHeroCanvas />
-
-              {/* Top Floating Badge */}
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '16px',
-                  left: '16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  padding: '6px 12px',
-                  borderRadius: '10px',
-                  background: 'rgba(8, 12, 24, 0.75)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  backdropFilter: 'blur(10px)',
-                  fontSize: '0.76rem',
-                  fontFamily: 'var(--font-mono)',
-                  color: 'var(--text-muted)'
-                }}
-              >
-                <Sparkles size={13} color="var(--accent-color)" />
-                AI / NEURAL 3D CANVAS
-              </div>
+            {/* Spatial Flight Deck HUD Component */}
+            <Card3DTilt maxTilt={5} elevateZ={20}>
+              <SpatialFlightDeck />
             </Card3DTilt>
           </div>
         </div>

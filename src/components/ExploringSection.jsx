@@ -38,12 +38,16 @@ export default function ExploringSection() {
           {currentlyExploring.map((item) => (
             <Card3DTilt
               key={item.title}
-              maxTilt={8}
+              maxTilt={9}
+              elevateZ={18}
               style={{
                 padding: '2.2rem',
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'space-between'
+                justifyContent: 'space-between',
+                background: 'rgba(12, 17, 36, 0.75)',
+                border: '1px solid var(--border-card-hover)',
+                boxShadow: '0 15px 35px rgba(0, 0, 0, 0.4)'
               }}
             >
               <div>

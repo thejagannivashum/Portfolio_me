@@ -15,13 +15,13 @@ export default function AboutSection() {
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <div className="section-badge">
             <User size={14} />
-            ABOUT ME
+            BIOMETRIC & ACADEMIC DOSSIER
           </div>
           <h2 className="section-title">
             Curious by Nature, <span className="gradient-text">Driven by Code</span>
           </h2>
           <p className="section-subtitle" style={{ margin: '0 auto' }}>
-            A glimpse into my academic background, technical interests, and approach to technology.
+            A transparent overview of my academic foundation, engineering mindset, and hands-on explorations in artificial intelligence.
           </p>
         </div>
 
@@ -29,34 +29,68 @@ export default function AboutSection() {
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '2rem',
+            gap: '2.2rem',
             alignItems: 'stretch'
           }}
         >
-          {/* Personal Bio Card */}
-          <Card3DTilt style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          {/* Personal Bio Card with 3D Depth */}
+          <Card3DTilt
+            maxTilt={8}
+            elevateZ={22}
+            style={{
+              padding: '2.5rem',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              background: 'rgba(12, 17, 36, 0.75)',
+              border: '1px solid var(--border-card-hover)',
+              boxShadow: '0 20px 45px rgba(0, 0, 0, 0.5)'
+            }}
+          >
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '1.5rem' }}>
+              {/* Header with biometric status */}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.75rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                  <div
+                    style={{
+                      width: '52px',
+                      height: '52px',
+                      borderRadius: '14px',
+                      background: 'var(--accent-soft)',
+                      border: '1px solid var(--border-card-hover)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'var(--accent-color)',
+                      boxShadow: '0 0 20px var(--accent-glow)'
+                    }}
+                  >
+                    <GraduationCap size={28} />
+                  </div>
+                  <div>
+                    <h3 style={{ fontSize: '1.45rem', fontWeight: 800 }}>{personalInfo.name}</h3>
+                    <div style={{ fontSize: '0.85rem', color: 'var(--accent-color)', fontFamily: 'var(--font-mono)' }}>
+                      {personalInfo.degree}
+                    </div>
+                  </div>
+                </div>
+
                 <div
                   style={{
-                    width: '50px',
-                    height: '50px',
-                    borderRadius: '14px',
-                    background: 'var(--accent-soft)',
-                    border: '1px solid var(--border-card-hover)',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'var(--accent-color)'
+                    gap: '5px',
+                    padding: '4px 10px',
+                    borderRadius: '8px',
+                    background: 'rgba(16, 185, 129, 0.12)',
+                    border: '1px solid rgba(16, 185, 129, 0.3)',
+                    color: '#34d399',
+                    fontSize: '0.74rem',
+                    fontFamily: 'var(--font-mono)'
                   }}
                 >
-                  <GraduationCap size={26} />
-                </div>
-                <div>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: 800 }}>{personalInfo.name}</h3>
-                  <div style={{ fontSize: '0.85rem', color: 'var(--accent-color)', fontFamily: 'var(--font-mono)' }}>
-                    {personalInfo.degree}
-                  </div>
+                  <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#34d399' }} />
+                  ACTIVE STUDENT
                 </div>
               </div>
 
@@ -73,7 +107,7 @@ export default function AboutSection() {
                 display: 'flex',
                 flexWrap: 'wrap',
                 gap: '8px',
-                paddingTop: '1.5rem',
+                paddingTop: '1.75rem',
                 borderTop: '1px solid rgba(255, 255, 255, 0.08)'
               }}
             >
@@ -84,7 +118,7 @@ export default function AboutSection() {
                 'Chennai, Tamil Nadu',
                 'AI & ML Exploration'
               ].map((item) => (
-                <span key={item} className="tech-pill">
+                <span key={item} className="tech-pill" style={{ fontSize: '0.82rem' }}>
                   <CheckCircle2 size={12} color="var(--accent-color)" />
                   {item}
                 </span>
@@ -97,26 +131,30 @@ export default function AboutSection() {
             {personalInfo.learningPhilosophy.map((item, index) => (
               <Card3DTilt
                 key={item.title}
-                maxTilt={8}
+                maxTilt={9}
+                elevateZ={16}
                 style={{
                   padding: '1.75rem',
                   display: 'flex',
                   alignItems: 'flex-start',
                   gap: '1.25rem',
-                  flex: 1
+                  flex: 1,
+                  background: 'rgba(12, 17, 36, 0.65)',
+                  border: '1px solid var(--border-card)'
                 }}
               >
                 <div
                   style={{
-                    width: '44px',
-                    height: '44px',
+                    width: '46px',
+                    height: '46px',
                     borderRadius: '12px',
                     background: 'var(--accent-soft)',
                     border: '1px solid var(--border-card-hover)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    flexShrink: 0
+                    flexShrink: 0,
+                    boxShadow: '0 0 15px var(--accent-glow)'
                   }}
                 >
                   {philosophyIcons[index]}
@@ -126,7 +164,7 @@ export default function AboutSection() {
                   <h4 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: '0.4rem', color: 'var(--text-main)' }}>
                     {item.title}
                   </h4>
-                  <p style={{ fontSize: '0.9rem', lineHeight: 1.6, color: 'var(--text-muted)' }}>
+                  <p style={{ fontSize: '0.92rem', lineHeight: 1.65, color: 'var(--text-muted)' }}>
                     {item.desc}
                   </p>
                 </div>
